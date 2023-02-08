@@ -13,6 +13,10 @@
         android:icon="@drawable/chat_icon"
         android:title="@string/chat" />
     <item
+        android:id="@+id/product"
+        android:icon="@drawable/product"
+        android:title="@string/Product" />
+    <item
         android:id="@+id/person"
         android:icon="@drawable/person_icon"
         android:title="@string/person" />

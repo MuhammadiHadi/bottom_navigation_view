@@ -6,14 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class home: Fragment() {
-
+class Product :Fragment() {
+ lateinit  var product:View
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.home_fragment,container,false)
+    product= inflater.inflate(R.layout.product_fragment,container,false)
+
+        return  product
     }
 }
