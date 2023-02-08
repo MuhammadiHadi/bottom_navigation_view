@@ -11,9 +11,10 @@ class MainActivity : AppCompatActivity() {
         binding=ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        replaceFragement(home())
       binding.bottomNavigation.setOnItemSelectedListener {
 
-     replaceFragement(home())
+
           when(it.itemId){
               R.id.home->replaceFragement(home())
               R.id.chat->replaceFragement(Chat())
