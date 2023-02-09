@@ -9,4 +9,5 @@
     <color name="white">#FDFBFB</color>
     <color name="bottom_navigation">#D307DC10</color>
     <color name="container">#8BCA917E</color>
+    <color name="bottom_sheet">#C9BCE889</color>
 </resources>

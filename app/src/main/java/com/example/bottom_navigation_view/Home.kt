@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.tabs.TabLayout.TabGravity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -33,7 +34,8 @@ class Home : Fragment() {
         val text = myView?.findViewById<TextView>(R.id.textView3)
 
         val button = myView?.findViewById<Button>(R.id.button)
-
+        val bottomsheet=myView?.findViewById<Button>(R.id.bottomsheet)
+        val closebutton=myView?.findViewById<Button>(R.id.close)
 
 
         button?.setOnClickListener {
@@ -64,6 +66,21 @@ class Home : Fragment() {
 
             }
 
+        }
+        //bottom sheet code
+        bottomsheet?.setOnClickListener {
+
+            println("bottom sheet")
+            val dialog= BottomSheetDialog(myView.context)
+            val view=layoutInflater.inflate(R.layout.bottom_sheet,null)
+            val closebutton=view.findViewById<Button>(R.id.close)
+            closebutton?.setOnClickListener {
+                dialog.dismiss()
+
+            }
+            dialog.setContentView(view)
+            dialog.show()
+            dialog.setCancelable(false)
         }
 
         return myView

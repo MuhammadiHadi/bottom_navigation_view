@@ -15,7 +15,7 @@ class MyItemAdaptar(var newsList:ArrayList<Item>): RecyclerView.Adapter<MyItemAd
     }
 
     override fun onBindViewHolder(holder: MyViewHodler, position: Int) {
-     val currentItem=newsList[position]
+     var currentItem=newsList[position]
         holder.imageview.setImageResource(currentItem.image)
         holder.title.text=currentItem.title
     }
