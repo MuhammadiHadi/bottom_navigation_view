@@ -9,11 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MyItemAdaptar(var newsList:ArrayList<Item>): RecyclerView.Adapter<MyItemAdaptar.MyViewHodler>() {
 
-
-
-
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHodler {
         val itemview=LayoutInflater.from(parent.context).inflate(R.layout.item,parent,false)
         return  MyViewHodler(itemview)
@@ -21,6 +16,7 @@ class MyItemAdaptar(var newsList:ArrayList<Item>): RecyclerView.Adapter<MyItemAd
 
     override fun onBindViewHolder(holder: MyViewHodler, position: Int) {
      val currentItem=newsList[position]
+        holder.imageview.setImageResource(currentItem.image)
         holder.title.text=currentItem.title
     }
 

@@ -49,9 +49,7 @@ class Product :Fragment() {
             R.drawable.hadi,
             R.drawable.hadi,
             R.drawable.hadi,
-            R.drawable.hadi,
-            R.drawable.hadi,
-            R.drawable.hadi,
+
 
         )
         recycleview.layoutManager=LinearLayoutManager(product.context)
@@ -63,9 +61,6 @@ class Product :Fragment() {
 
         return  product
     }
-
-
-
     fun getData(){
         for(i in image .indices){
 
